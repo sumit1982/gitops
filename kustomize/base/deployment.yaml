@@ -1,0 +1,22 @@
+---    
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: npm
+  #namespace: prod-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: npm
+  template:
+    metadata:
+      labels:
+        app: npm
+    spec:
+      containers:
+        - name: npm
+          image: npm
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
