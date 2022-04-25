@@ -6,5 +6,5 @@ resources:
 namespace: gitops
 images:
 - name: npm
-  newName: sumitroopchandani/npm-gitops
-  newTag: "10"
+  newName: sumitroopchandani/hello-gitops
+  newTag: "1"
