@@ -7,4 +7,4 @@ namespace: gitops
 images:
 - name: npm
   newName: sumitroopchandani/hello-gitops
-  newTag: "4"
+  newTag: "6"
