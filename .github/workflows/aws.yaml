@@ -1,0 +1,25 @@
+name: Github_Action
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: my-custom-runner
+    steps:
+
+    - name: Check out code
+      uses: actions/checkout@v2
+  
+
+   - name: Configure AWS credentials from Test account
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: arn:aws:iam::664258656701:role/github_roles
+        aws-region: us-east-1
+
+    - name: AWS S3 list
+      run: |
+        aws s3 ls
