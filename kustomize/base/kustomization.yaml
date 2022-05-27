@@ -10,4 +10,4 @@ images:
   newTag: latest
 - name: npm
   newName: sumitroopchandani/hello-gitops
-  newTag: "7"
+  newTag: "8"
