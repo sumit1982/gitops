@@ -86,7 +86,7 @@ textarea:focus{
   outline: none;
 }
 .dark-mode{
-  background-color: rgb(33, 180, 178);
+  background-color: rgb(168, 33, 180);
   min-height: 100vh;
 }
 .dark-mode h1{
