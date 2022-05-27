@@ -5,7 +5,7 @@ metadata:
   name: npm
   #namespace: prod-ns
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: npm
@@ -20,3 +20,38 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-node
+  #namespace: prod-ns
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: frontend-node
+  template:
+    metadata:
+      labels:
+        app: frontend-node
+    spec:
+      containers:
+        - name: frontend-node
+          image: nginx
+          imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 0
+            periodSeconds: 10
+            timeoutSeconds: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            successThreshold: 3
+          ports:
+            - containerPort: 80              

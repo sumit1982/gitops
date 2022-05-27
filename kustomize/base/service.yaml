@@ -5,6 +5,26 @@ metadata:
   #annotations:
   # This annotation is only required if you are creating an internal facing ELB. Remove this annotation to create public facing ELB.
   #service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+  name: frontend-node
+  #namespace: prod-ns
+  labels:
+    app: frontend-node
+spec:
+  ports:
+    - name: "http"
+      port: 80
+      targetPort: 80
+  selector:
+    app: frontend-node
+  type: NodePort  
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  #annotations:
+  # This annotation is only required if you are creating an internal facing ELB. Remove this annotation to create public facing ELB.
+  #service.beta.kubernetes.io/aws-load-balancer-internal: "true"
   name: npm
   #namespace: prod-ns
   labels:
@@ -16,4 +36,4 @@ spec:
       targetPort: 3000
   selector:
     app: npm
-  type: NodePort  
+

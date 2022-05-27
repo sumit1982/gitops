@@ -1,4 +1,4 @@
-name: Github_Action
+name: app_build_workflow
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: my-custom-runner
+    runs-on: custom-runner
     steps:
 
     - name: Check out code
@@ -24,7 +24,7 @@ jobs:
 
   deploy:
     name: Deploy
-    runs-on: my-custom-runner
+    runs-on: custom-runner
     needs: build
 
     steps:

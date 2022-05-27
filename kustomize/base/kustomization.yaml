@@ -8,3 +8,6 @@ images:
 - name: npm
   newName: sumitroopchandani/hello-gitops
   newTag: "6"
+- name: nginx
+  newName: sumitroopchandani/nginx
+  newTag: "latest"  
