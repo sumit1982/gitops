@@ -5,9 +5,9 @@ resources:
 - service.yaml
 namespace: gitops
 images:
-- name: npm
-  newName: sumitroopchandani/hello-gitops
-  newTag: "6"
 - name: nginx
   newName: sumitroopchandani/nginx
-  newTag: "latest"  
+  newTag: latest
+- name: npm
+  newName: sumitroopchandani/hello-gitops
+  newTag: "7"
