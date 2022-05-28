@@ -27,7 +27,7 @@ metadata:
   name: frontend-node
   #namespace: prod-ns
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: frontend-node
