@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: k8s-runners
+    runs-on: my-custom-runner
     steps:
 
     - name: Check out code
@@ -24,7 +24,7 @@ jobs:
 
   deploy:
     name: Deploy
-    runs-on: k8s-runners
+    runs-on: my-custom-runner
     needs: build
 
     steps:
