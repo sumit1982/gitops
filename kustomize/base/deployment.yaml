@@ -17,7 +17,6 @@ spec:
       containers:
         - name: npm
           image: npm
-          imagePullPolicy: Always
           ports:
             - containerPort: 3000
 ---
@@ -39,7 +38,6 @@ spec:
       containers:
         - name: frontend-node
           image: nginx
-          imagePullPolicy: Always
           livenessProbe:
             httpGet:
               path: /
