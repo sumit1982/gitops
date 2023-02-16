@@ -75,7 +75,7 @@ textarea:focus{
   border-radius: 10px;
   padding: 1.5em;
   margin-bottom: 10px;
-  border:solid 4px #308d46;
+  border:solid 4px #8d6830;
 }
 .search input{
   border: none;
@@ -86,7 +86,7 @@ textarea:focus{
   outline: none;
 }
 .dark-mode{
-  background-color: rgb(181, 24, 42);
+  background-color: rgb(181, 24, 168);
   min-height: 100vh;
 }
 .dark-mode h1{
