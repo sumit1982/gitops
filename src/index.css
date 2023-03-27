@@ -71,11 +71,11 @@ textarea:focus{
 .search{
   display: flex;
   align-items: center;
-  background-color: rgb(246, 244, 244);
+  background-color: rgb(246, 244, 246);
   border-radius: 10px;
   padding: 1.5em;
   margin-bottom: 10px;
-  border:solid 4px #8d6830;
+  border:solid 4px #3f308d;
 }
 .search input{
   border: none;
@@ -86,7 +86,7 @@ textarea:focus{
   outline: none;
 }
 .dark-mode{
-  background-color: rgb(181, 24, 168);
+  background-color: rgb(24, 181, 37);
   min-height: 100vh;
 }
 .dark-mode h1{
